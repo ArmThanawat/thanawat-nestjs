@@ -19,4 +19,9 @@ export class AppController {
   getJson(): { name:string, lastname:string, age:number} {
     return this.appService.getJson();
   }
+
+  @Get('/showGit')
+  getGit(): string {
+    return this.appService.getGit();
+  }
 }
