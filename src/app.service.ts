@@ -10,7 +10,7 @@ export class AppService {
     return 'I am Thanawat 18year old';
   }
 
-  getJson(): { name:string, lastname:string, age:number} {
+  getJson(): {name:string, lastname:string, age:number} {
     return { 
       name: 'Bhuddha',
       lastname: 'Christ',
@@ -21,5 +21,8 @@ export class AppService {
   getGit(): string {
     return 'Git and GitHub using.';
   }
-
+  
+  getPost(): string {
+    return 'We use postman.';
+  }
 }

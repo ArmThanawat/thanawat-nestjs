@@ -24,4 +24,9 @@ export class AppController {
   getGit(): string {
     return this.appService.getGit();
   }
+  
+  @Get('/showPost')
+  getPost(): string {
+    return this.appService.getPost();
+  }
 }
