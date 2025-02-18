@@ -16,7 +16,7 @@ export class AppController {
   }
 
   @Get('/myJson')
-  getJson(): { name:string, lastname:string, age:number} {
+  getJson(): { name: string; lastname: string; age: number } {
     return this.appService.getJson();
   }
 
@@ -24,7 +24,7 @@ export class AppController {
   getGit(): string {
     return this.appService.getGit();
   }
-  
+
   @Get('/showPost')
   getPost(): string {
     return this.appService.getPost();
