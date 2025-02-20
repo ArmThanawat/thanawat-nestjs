@@ -7,9 +7,10 @@ import { ChatModule } from './chat/chat.module';
 import { OrderModule } from './order/order.module';
 import { UserController } from './user/user.controller';
 import { UserModule } from './user/user.module';
+import { GlobalHelperModule } from './shared/global-helper/global-helper.module';
 
 @Module({
-  imports: [ProductModule, UtilityModule, ChatModule, OrderModule, UserModule],
+  imports: [ProductModule, UtilityModule, ChatModule, OrderModule, UserModule, GlobalHelperModule],
   controllers: [AppController, UserController],
   providers: [AppService],
 })
