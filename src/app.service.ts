@@ -11,7 +11,8 @@ export class AppService {
     return {
       name: 'Milky way',
       age: 1.361e10,
-      type: 'Barred spiral galaxy'
+      type: 'Barred spiral galaxy',
+      version: process.env.API_VERSION,
     }
   }
   
