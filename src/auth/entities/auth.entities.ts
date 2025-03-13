@@ -24,6 +24,8 @@ export class AuthUser extends Model {
     @Column({
         type: DataType.TEXT,
         defaultValue: false,
+        allowNull: false,
+        // unique: true,
     })
     email: string
 }
