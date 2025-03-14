@@ -8,10 +8,12 @@ import {
   Param,
   Delete,
   NotFoundException,
+  UseGuards,
 } from '@nestjs/common';
 import { CustomerService } from './customer.service';
 import { CreateCustomerDto } from './dto/create-customer.dto';
 import { UpdateCustomerDto } from './dto/update-customer.dto';
+import { jwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
 @Controller('customer')
 export class CustomerController {
@@ -70,6 +72,7 @@ export class CustomerController {
     return { message: 'Update Data Complete' };
   }
 
+  @UseGuards(jwtAuthGuard) // check token
   @Delete('/delete/:id') // localhost:3000/customer/delete/:id
   async remove(@Param('id') id: string) {
     const destroyCustomer = await this.customerService.remove(+id);
